@@ -1,37 +1,38 @@
+import "./Categories.style.scss";
 const categories = [
   {
+    id: "1",
     title: "hates",
-    id: "1",
   },
   {
+    id: "2",
     title: "jackets",
-    id: "1",
   },
   {
-    title: "Snekers",
     id: "3",
+    title: "Snekers",
   },
   {
-    title: "Womens",
     id: "4",
+    title: "Womens",
   },
   {
-    title: "Mens",
     id: "5",
+    title: "Mens",
   },
 ];
 const App = () => {
   return (
     <div className="main-container">
-      <h1>this is dheeraj</h1>
-      {categories.map(({ title }) => (
-        <div className="category-container">
+      {categories.map(({ title, id }) => (
+        <div key={id} className="category-container">
           <div className="text-container">
             <h2>{title}</h2>
             <p>shop now</p>
           </div>
         </div>
       ))}
+      {/* <p>dheeraj</p> */}
     </div>
   );
 };
